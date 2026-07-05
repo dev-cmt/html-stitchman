@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stitchman | Men's Style - Premium Cotton Shirts</title>
+    <meta name="description"
+        content="Stitchman Men's Style - shop exclusive lightweight cotton shirts: solid, stripe, check, and printed collections. Free delivery over 2000 BDT.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #111010;
+            --rust: #e84c2b;
+            --rust-d: #b83a1f;
+            --olive: #5c6650;
+            --sand: #f0ebe0;
+            --cream: #faf8f4;
+            --line: #e4ddd0;
+            --white: #ffffff;
+            --mute: #6b6560;
+            --hh: 64px;
+            --nh: 44px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .df {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1.5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--rust);
+            border-radius: 4px;
+        }
+
+        /* TOPBAR */
+        .topbar {
+            background: var(--ink);
+            color: rgba(255, 255, 255, .8);
+            font-size: .67rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 8px 12px;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        .topbar strong {
+            color: var(--rust);
+        }
+
+        /* HEADER */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+            height: var(--hh);
+            display: flex;
+            align-items: center;
+            transition: box-shadow .3s;
+        }
+
+        .site-header.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+        }
+
+        .brand-mark {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.7rem;
+            line-height: 1;
+            border: 2px solid var(--ink);
+            padding: 4px 12px;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 1px;
+            transition: .25s;
+        }
+
+        .brand-mark small {
+            font-family: 'Outfit', sans-serif;
+            font-size: .42rem;
+            letter-spacing: 3.5px;
+            color: var(--rust);
+            font-weight: 600;
+        }
+
+        .brand-mark:hover {
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .hdr-search {
+            position: relative;
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .hdr-search input {
+            width: 100%;
+            border: 1.5px solid var(--line);
+            background: var(--cream);
+            padding: 9px 44px 9px 14px;
+            font-size: .83rem;
+            font-family: 'Outfit', sans-serif;
+            outline: none;
+            transition: border-color .2s;
+        }
+
+        .hdr-search input:focus {
+            border-color: var(--rust);
+            background: #fff;
+        }
+
+        .hdr-search button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 44px;
+            background: var(--ink);
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .hdr-search button:hover {
+            background: var(--rust);
+        }
+
+        .hdr-icons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hdr-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            font-size: .6rem;
+            letter-spacing: .5px;
+            color: var(--ink);
+            cursor: pointer;
+            transition: color .2s;
+            position: relative;
+        }
+
+        .hdr-icon i {
+            font-size: 1.1rem;
+        }
+
+        .hdr-icon:hover {
+            color: var(--rust);
+        }
+
+        .cart-dot {
+            position: absolute;
+            top: -5px;
+            right: -7px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--rust);
+            color: #fff;
+            font-size: .52rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .mob-sb {
+            display: none;
+        }
+
+        /* MAIN NAV */
+        .main-nav {
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+            height: var(--nh);
+            display: flex;
+            align-items: stretch;
+            position: sticky;
+            top: var(--hh);
+            z-index: 890;
+        }
+
+        .main-nav .inner {
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        .cat-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--rust);
+            color: #fff;
+            border: none;
+            padding: 0 18px;
+            font-family: 'Outfit', sans-serif;
+            font-size: .7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background .2s;
+            flex-shrink: 0;
+        }
+
+        .cat-btn:hover {
+            background: var(--rust-d);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: stretch;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            padding: 0 13px;
+            font-size: .7rem;
+            font-weight: 500;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            color: var(--ink);
+            transition: .2s;
+            border-bottom: 2px solid transparent;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--rust);
+            border-bottom-color: var(--rust);
+        }
+
+        .nav-drop {
+            position: relative;
+        }
+
+        .nav-drop>a::after {
+            content: "\f107";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-left: 5px;
+            font-size: .6rem;
+        }
+
+        .drop-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.25s;
+            z-index: 999;
+            padding: 6px 0;
+        }
+
+        .nav-drop:hover .drop-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .drop-menu a {
+            display: block;
+            padding: 8px 16px;
+            font-size: .75rem;
+            font-weight: 500;
+            border-bottom: none;
+            text-transform: none;
+            letter-spacing: 0;
+            color: var(--ink);
+            transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+        }
+
+        .drop-menu a:hover {
+            background: #f5f7fa;
+            color: var(--rust);
+            padding-left: 22px;
+        }
+
+        /* HERO */
+        #hero {
+            margin-top: 16px;
+            margin-bottom: 20px;
+        }
+
+        .hero-banner-link {
+            display: block;
+            overflow: hidden;
+        }
+
+        .hero-banner-link img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-banner-link:hover img {
+            transform: scale(1.01);
+        }
+
+        /* CAT CHIPS */
+        .chip-strip {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 26px 0 4px;
+            scrollbar-width: none;
+        }
+
+        .chip-strip::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cat-chip {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            border: 1.5px solid var(--line);
+            padding: 14px 18px;
+            cursor: pointer;
+            transition: .25s;
+            min-width: 90px;
+        }
+
+        .cat-chip i {
+            font-size: 1.3rem;
+            color: var(--rust);
+        }
+
+        .cat-chip span {
+            font-size: .65rem;
+            font-weight: 600;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            color: var(--ink);
+        }
+
+        .cat-chip:hover {
+            border-color: var(--rust);
+            background: var(--rust);
+        }
+
+        .cat-chip:hover i,
+        .cat-chip:hover span {
+            color: #fff;
+        }
+
+        /* SECTION HEAD */
+        .sec-head {
+            text-align: center;
+            padding: 44px 0 28px;
+        }
+
+        .sec-head h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            display: inline-block;
+            position: relative;
+        }
+
+        .sec-head h2::after {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            background: var(--rust);
+            margin: 10px auto 0;
+        }
+
+        .sec-head p {
+            margin-top: 10px;
+            font-size: .83rem;
+            color: var(--mute);
+            max-width: 440px;
+            margin-inline: auto;
+        }
+
+        /* PRODUCT CARD */
+        .prod-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            overflow: hidden;
+            transition: transform .3s, box-shadow .3s;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prod-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, .09);
+        }
+
+        .prod-thumb {
+            position: relative;
+            background: var(--sand);
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prod-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .prod-card:hover .prod-thumb img {
+            transform: scale(1.04);
+        }
+
+        .prod-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--rust);
+            color: #fff;
+            font-size: .58rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            z-index: 2;
+        }
+
+        .prod-badge.s {
+            background: var(--olive);
+        }
+
+        .prod-body {
+            padding: 12px 14px 14px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prod-name {
+            font-size: .78rem;
+            font-weight: 500;
+            line-height: 1.45;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            flex: 1;
+        }
+
+        .prod-price {
+            margin-top: 6px;
+            font-size: .92rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .btn-sel {
+            margin-top: 12px;
+            background: #f1f3f6;
+            border: none;
+            color: var(--ink);
+            width: 100%;
+            padding: 9px 0;
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.25s, color 0.25s;
+        }
+
+        .btn-sel:hover {
+            background: var(--ink);
+            color: #fff;
+        }
+
+        /* BROWSE */
+        .browse-w {
+            text-align: center;
+            padding: 28px 0 52px;
+        }
+
+        .btn-br {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid var(--ink);
+            color: var(--ink);
+            padding: 11px 26px;
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: .25s;
+            background: transparent;
+        }
+
+        .btn-br:hover {
+            background: var(--ink);
+            color: #fff;
+        }
+
+        /* PROMO */
+        .promo {
+            background: var(--ink);
+            padding: 60px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo::before {
+            content: 'STITCHMAN';
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18vw;
+            color: rgba(255, 255, 255, .03);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .promo h2 {
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .promo h2 .r {
+            color: var(--rust);
+        }
+
+        .promo p {
+            color: rgba(255, 255, 255, .6);
+            font-size: .85rem;
+            max-width: 400px;
+            margin: 0 auto 26px;
+            line-height: 1.75;
+        }
+
+        .btn-pr {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1.5px solid var(--rust);
+            color: var(--rust);
+            padding: 12px 30px;
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: .25s;
+            background: transparent;
+        }
+
+        .btn-pr:hover {
+            background: var(--rust);
+            color: #fff;
+        }
+
+        /* FEATURES */
+        .features {
+            background: #fff;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 28px 0;
+        }
+
+        .feat-i {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 20px;
+        }
+
+        .feat-i i {
+            font-size: 1.6rem;
+            color: var(--rust);
+            flex-shrink: 0;
+        }
+
+        .feat-i h6 {
+            font-size: .78rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .feat-i p {
+            font-size: .68rem;
+            color: var(--mute);
+            margin: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--ink);
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .ft {
+            padding: 52px 0 36px;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .ft .brand-mark {
+            border-color: rgba(255, 255, 255, .25);
+            color: #fff;
+        }
+
+        .ft .brand-mark:hover {
+            background: var(--rust);
+            border-color: var(--rust);
+        }
+
+        .ft-about {
+            font-size: .78rem;
+            line-height: 1.75;
+            margin-top: 14px;
+            max-width: 240px;
+        }
+
+        .ft-col h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        .ft-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ft-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .ft-col ul a {
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .6);
+            transition: color .2s;
+        }
+
+        .ft-col ul a:hover {
+            color: var(--rust);
+        }
+
+        .soc {
+            display: flex;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .soc a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255, 255, 255, .2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, .6);
+            font-size: .9rem;
+            transition: .2s;
+        }
+
+        .soc a:hover {
+            border-color: var(--rust);
+            color: var(--rust);
+        }
+
+        .ft-bot {
+            padding: 18px 0;
+            font-size: .7rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ft-bot a {
+            color: rgba(255, 255, 255, .5);
+            margin: 0 6px;
+        }
+
+        .ft-bot a:hover {
+            color: var(--rust);
+        }
+
+        /* OFFCANVAS */
+        .oc-bd {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+            z-index: 1100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+        .oc-bd.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .oc-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            max-width: 85vw;
+            height: 100%;
+            background: #fff;
+            z-index: 1101;
+            transform: translateX(-100%);
+            transition: transform .32s cubic-bezier(.4, 0, .2, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 6px 0 30px rgba(0, 0, 0, .12);
+        }
+
+        .oc-panel.open {
+            transform: translateX(0);
+        }
+
+        .oc-hd {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .oc-ttl {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .oc-ttl i {
+            color: var(--rust);
+        }
+
+        .oc-x {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--ink);
+            cursor: pointer;
+            padding: 4px 8px;
+            transition: color .2s;
+        }
+
+        .oc-x:hover {
+            color: var(--rust);
+        }
+
+        .oc-si {
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .oc-si input {
+            width: 100%;
+            border: 1.5px solid var(--line);
+            padding: 8px 12px;
+            font-size: .8rem;
+            font-family: 'Outfit', sans-serif;
+            outline: none;
+        }
+
+        .oc-si input:focus {
+            border-color: var(--rust);
+        }
+
+        .oc-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px 0;
+        }
+
+        .oc-lbl {
+            font-size: .6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--mute);
+            padding: 12px 20px 6px;
+        }
+
+        .oc-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 20px;
+            color: var(--ink);
+            font-size: .85rem;
+            font-weight: 500;
+            border-bottom: 1px solid #f5f2ec;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .oc-item i {
+            width: 20px;
+            text-align: center;
+            color: var(--rust);
+            font-size: .9rem;
+        }
+
+        .oc-item:hover {
+            background: var(--rust);
+            color: #fff;
+            padding-left: 28px;
+        }
+
+        .oc-item:hover i {
+            color: #fff;
+        }
+
+        .oc-item .ct {
+            margin-left: auto;
+            font-size: .65rem;
+            background: var(--sand);
+            padding: 2px 7px;
+            color: var(--mute);
+        }
+
+        .oc-item:hover .ct {
+            background: rgba(255, 255, 255, .2);
+            color: #fff;
+        }
+
+        /* SEARCH PANEL */
+        .s-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 360px;
+            max-width: 95vw;
+            height: 100%;
+            background: #fff;
+            z-index: 1101;
+            transform: translateX(100%);
+            transition: transform .32s cubic-bezier(.4, 0, .2, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: -6px 0 30px rgba(0, 0, 0, .1);
+        }
+
+        .s-panel.open {
+            transform: translateX(0);
+        }
+
+        .s-hd {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .s-hd h6 {
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--mute);
+        }
+
+        .s-in {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .s-in input {
+            width: 100%;
+            border: 1.5px solid var(--line);
+            padding: 10px 14px;
+            font-size: .9rem;
+            font-family: 'Outfit', sans-serif;
+            outline: none;
+        }
+
+        .s-in input:focus {
+            border-color: var(--rust);
+        }
+
+        .s-tags {
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .s-tags p {
+            font-size: .6rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--mute);
+            margin-bottom: 8px;
+        }
+
+        .stag {
+            display: inline-block;
+            border: 1px solid var(--line);
+            background: var(--sand);
+            padding: 4px 12px;
+            font-size: .68rem;
+            margin: 3px 3px 0 0;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .stag:hover {
+            background: var(--rust);
+            color: #fff;
+            border-color: var(--rust);
+        }
+
+        .s-res {
+            flex: 1;
+            overflow-y: auto;
+            padding: 14px 20px;
+        }
+
+        .s-ri {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f2ec;
+        }
+
+        .s-ri .rn {
+            font-size: .75rem;
+            font-weight: 500;
+        }
+
+        .s-ri .rp {
+            font-size: .72rem;
+            color: var(--rust-d);
+            font-weight: 700;
+        }
+
+        .ldots span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--rust);
+            margin: 0 2px;
+            animation: blink 1.2s infinite;
+        }
+
+        .ldots span:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        .ldots span:nth-child(3) {
+            animation-delay: .4s;
+        }
+
+        @keyframes blink {
+
+            0%,
+            80%,
+            100% {
+                opacity: .2;
+            }
+
+            40% {
+                opacity: 1;
+            }
+        }
+
+        /* MOBILE */
+        @media(max-width:767px) {
+            :root {
+                --hh: 56px;
+                --nh: 0px;
+            }
+
+            .main-nav {
+                display: none !important;
+            }
+
+            /* Desktop header row hidden on mobile (handled by d-none d-md-flex) */
+            .hdr-desktop {
+                display: none !important;
+            }
+
+            .brand-mark {
+                font-size: 1.3rem;
+                padding: 3px 8px;
+            }
+
+            .brand-mark small {
+                font-size: .38rem;
+            }
+
+            /* Hero image — cover full area, position top so faces show */
+            .hero-img {
+                object-position: center top;
+                width: 100%;
+                height: 100%;
+            }
+
+            .hero-cnt {
+                padding: 0 20px;
+            }
+
+            .hero-title {
+                font-size: 2.6rem;
+            }
+
+            .hero-sub {
+                font-size: .8rem;
+            }
+
+            .sec-head {
+                padding: 32px 0 20px;
+            }
+
+            .ft {
+                padding: 36px 0 24px;
+            }
+
+            .ft-about {
+                max-width: 100%;
+            }
+
+            body {
+                padding-bottom: 62px;
+            }
+        }
+
+        .mob-bot {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-top: 1px solid var(--line);
+            z-index: 800;
+            padding: 6px 0 env(safe-area-inset-bottom, 6px);
+        }
+
+        @media(max-width:767px) {
+            .mob-bot {
+                display: flex;
+            }
+        }
+
+        .mn-i {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            padding: 6px 0;
+            font-size: .58rem;
+            font-weight: 600;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            color: var(--mute);
+            cursor: pointer;
+            transition: color .2s;
+        }
+
+        .mn-i i {
+            font-size: 1.1rem;
+        }
+
+        .mn-i.a,
+        .mn-i:hover {
+            color: var(--rust);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">Free delivery on orders over <strong>2000 BDT</strong>&nbsp;|&nbsp;New Oxford Cotton arrivals
+        every week&nbsp;|&nbsp;Premium quality guaranteed</div>
+
+    <div class="oc-bd" id="ocBd"></div>
+
+    <!-- CATEGORIES OFFCANVAS -->
+    <aside class="oc-panel" id="catPanel" aria-label="Categories">
+        <div class="oc-hd">
+            <div class="oc-ttl"><i class="fa-solid fa-grip"></i> Categories</div>
+            <button class="oc-x" id="ocX"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="oc-si"><input type="text" placeholder="Search category..." id="ocQ"></div>
+        <div class="oc-body">
+            <div class="oc-lbl">Shirt Types</div>
+            <div class="oc-item" data-go="solid"><i class="fa-solid fa-shirt"></i>Solid Color Shirts<span
+                    class="ct">24</span></div>
+            <div class="oc-item" data-go="stripe"><i class="fa-solid fa-shirt"></i>Stripe Full Sleeve<span
+                    class="ct">18</span></div>
+            <div class="oc-item" data-go="check"><i class="fa-solid fa-shirt"></i>Check Full Sleeve<span
+                    class="ct">20</span></div>
+            <div class="oc-item" data-go="half"><i class="fa-solid fa-shirt"></i>Half Sleeve<span class="ct">12</span>
+            </div>
+            <div class="oc-item" data-go="printed"><i class="fa-solid fa-palette"></i>Printed Shirts<span
+                    class="ct">15</span></div>
+            <div class="oc-lbl">Collections</div>
+            <div class="oc-item" data-go="solid"><i class="fa-solid fa-star"></i>New Arrivals<span class="ct">8</span>
+            </div>
+            <div class="oc-item" data-go="solid"><i class="fa-solid fa-fire"></i>Best Sellers<span class="ct">10</span>
+            </div>
+            <div class="oc-item" data-go="printed"><i class="fa-solid fa-tag"></i>Sale<span class="ct">6</span></div>
+            <div class="oc-lbl">Fabric</div>
+            <div class="oc-item"><i class="fa-solid fa-leaf"></i>Oxford Cotton</div>
+            <div class="oc-item"><i class="fa-solid fa-leaf"></i>Poplin</div>
+            <div class="oc-item"><i class="fa-solid fa-leaf"></i>Linen Blend</div>
+        </div>
+    </aside>
+
+    <!-- SEARCH PANEL -->
+    <div class="s-panel" id="sPanel" aria-label="Search">
+        <div class="s-hd">
+            <h6>Search Products</h6>
+            <button class="oc-x" id="sPanelX"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="s-in"><input type="text" id="sInp" placeholder="e.g. white shirt, check, formal..."></div>
+        <div class="s-tags">
+            <p>Popular</p>
+            <span class="stag" data-q="white">White shirt</span>
+            <span class="stag" data-q="black">Black shirt</span>
+            <span class="stag" data-q="solid">Solid</span>
+            <span class="stag" data-q="check">Check</span>
+            <span class="stag" data-q="formal">Formal</span>
+            <span class="stag" data-q="stripe">Stripe</span>
+        </div>
+        <div class="s-res" id="sRes"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="sHdr">
+        <div class="container">
+            <!-- DESKTOP: logo | search (center) | icons -->
+            <div class="hdr-desktop d-none d-md-flex align-items-center w-100" style="gap:0;">
+                <div style="flex:1;display:flex;align-items:center;">
+                    <a href="#" class="brand-mark">stitchman<small>MEN'S STYLE</small></a>
+                </div>
+                <div class="hdr-search" style="flex:0 0 440px;max-width:440px;">
+                    <input type="text" placeholder="Search for products" id="dSrch">
+                    <button id="dSrchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div style="flex:1;display:flex;justify-content:flex-end;">
+                    <div class="hdr-icons">
+                        <div class="hdr-icon"><i class="fa-regular fa-user"></i><span>Account</span></div>
+                        <div class="hdr-icon" id="cartIco" style="position:relative;">
+                            <i class="fa-solid fa-cart-shopping"></i><span>Cart</span>
+                            <div class="cart-dot" id="cCnt">0</div>
+                        </div>
+                        <div class="hdr-icon" id="dMenuBtn">
+                            <i class="fa-solid fa-bars" style="font-size:1.15rem;"></i>
+                            <span>Menu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MOBILE: hamburger | logo (center) | search + cart -->
+            <div class="hdr-mobile d-flex d-md-none align-items-center w-100">
+                <div style="flex: 1; display: flex; justify-content: flex-start; align-items: center;">
+                    <div class="hdr-icon" id="mobMenu">
+                        <i class="fa-solid fa-bars" style="font-size:1.3rem;"></i>
+                    </div>
+                </div>
+                <div style="flex: 0 0 auto; display: flex; justify-content: center; align-items: center;">
+                    <a href="#" class="brand-mark">stitchman<small>MEN'S STYLE</small></a>
+                </div>
+                <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center;">
+                    <div class="hdr-icons" style="gap:14px;">
+                        <div class="hdr-icon" id="mobSBtn">
+                            <i class="fa-solid fa-magnifying-glass" style="font-size:1.2rem;"></i>
+                        </div>
+                        <div class="hdr-icon" id="mobCartBtn" style="position:relative;">
+                            <i class="fa-solid fa-cart-shopping" style="font-size:1.2rem;"></i>
+                            <div class="cart-dot">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN NAV -->
+    <nav class="main-nav d-none d-md-flex" id="mNav">
+        <div class="container inner">
+            <button class="cat-btn" id="openCat"><i class="fa-solid fa-bars"></i> Shop by Categories</button>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#solid">Solid color shirts</a></li>
+                <li><a href="#stripe">Stripe full sleeve</a></li>
+                <li><a href="#check">Check Full Sleeve</a></li>
+                <li><a href="#printed">Printed Shirts</a></li>
+                <li class="nav-drop">
+                    <a href="#">All Products</a>
+                    <div class="drop-menu">
+                        <a href="#solid">Solid Color Shirts</a>
+                        <a href="#stripe">Stripe Full Sleeve</a>
+                        <a href="#check">Check Full Sleeve</a>
+                        <a href="#printed">Printed Shirts</a>
+                        <a href="#">New Arrivals</a>
+                        <a href="#">Best Sellers</a>
+                    </div>
+                </li>
+                <li class="nav-drop">
+                    <a href="#">Shopping Cart</a>
+                    <div class="drop-menu">
+                        <a href="#">View Cart</a>
+                        <a href="#">Checkout</a>
+                    </div>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="container">
+        <a href="#solid" class="hero-banner-link">
+            <img src="images/stitchman-banner-2.png" alt="Stitchman Premium Shirt Collection"
+                onerror="this.style.display='none'">
+        </a>
+    </section>
+
+    <!-- CATEGORY CHIPS -->
+    <div class="container">
+        <div class="chip-strip">
+            <div class="cat-chip" onclick="openCat();smoothTo('solid')"><i
+                    class="fa-solid fa-shirt"></i><span>Solid</span></div>
+            <div class="cat-chip" onclick="openCat();smoothTo('stripe')"><i
+                    class="fa-solid fa-shirt"></i><span>Stripe</span></div>
+            <div class="cat-chip" onclick="openCat();smoothTo('check')"><i
+                    class="fa-solid fa-shirt"></i><span>Check</span></div>
+            <div class="cat-chip" onclick="openCat();smoothTo('printed')"><i
+                    class="fa-solid fa-palette"></i><span>Printed</span></div>
+            <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-star"></i><span>New Arrival</span></div>
+            <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-fire"></i><span>Best Sellers</span></div>
+            <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-tag"></i><span>Sale</span></div>
+            <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-leaf"></i><span>Oxford</span></div>
+        </div>
+    </div>
+
+    <!-- SOLID -->
+    <section id="solid">
+        <div class="container">
+            <div class="sec-head" data-aos="fade-up">
+                <h2>New Colors</h2>
+                <p>Pure Oxford Cotton crafted for the modern gentleman who demands excellence.</p>
+            </div>
+            <div class="row g-3" id="solidG"></div>
+            <div class="browse-w"><button class="btn-br">Browse All Solid Shirts <i
+                        class="fa-solid fa-arrow-right"></i></button></div>
+        </div>
+    </section>
+
+    <!-- PROMO -->
+    <div class="promo" data-aos="fade-up">
+        <h2>Created For <span class="r">The Modern</span> Gentleman</h2>
+        <p>Every stitch tells a story of precision craftsmanship and premium comfort from boardroom to casual evenings.
+        </p>
+        <button class="btn-pr">Explore Collection <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- STRIPE -->
+    <section id="stripe">
+        <div class="container">
+            <div class="sec-head" data-aos="fade-up">
+                <h2>New Stripe</h2>
+                <p>Bold lines, refined style &mdash; the stripe collection for the sophisticated man.</p>
+            </div>
+            <div class="row g-3" id="stripeG"></div>
+            <div class="browse-w"><button class="btn-br">Browse All Stripe Shirts <i
+                        class="fa-solid fa-arrow-right"></i></button></div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <div class="features" data-aos="fade-up">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-6 col-md-3">
+                    <div class="feat-i"><i class="fa-solid fa-truck-fast"></i>
+                        <div>
+                            <h6>Free Delivery</h6>
+                            <p>On orders over 2000 BDT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feat-i"><i class="fa-solid fa-shield-halved"></i>
+                        <div>
+                            <h6>Secure Payment</h6>
+                            <p>100% protected checkout</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feat-i"><i class="fa-solid fa-rotate-left"></i>
+                        <div>
+                            <h6>Easy Returns</h6>
+                            <p>7-day hassle-free return</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feat-i"><i class="fa-solid fa-headset"></i>
+                        <div>
+                            <h6>24/7 Support</h6>
+                            <p>Chat with us anytime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <a href="#" class="brand-mark">stitchman<small>MEN'S STYLE</small></a>
+                        <p class="ft-about">Premium shirts crafted from the finest Oxford Cotton. Designed for the
+                            modern gentleman who demands style and comfort.</p>
+                        <div class="soc">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 offset-md-1 ft-col">
+                        <h6>Shop</h6>
+                        <ul>
+                            <li><a href="#solid">Solid Color Shirts</a></li>
+                            <li><a href="#stripe">Stripe Full Sleeve</a></li>
+                            <li><a href="#check">Check Full Sleeve</a></li>
+                            <li><a href="#printed">Printed Shirts</a></li>
+                            <li><a href="#">Half Sleeve</a></li>
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 ft-col">
+                        <h6>Help</h6>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 ft-col">
+                        <h6>Newsletter</h6>
+                        <p style="font-size:.78rem;line-height:1.7;margin-bottom:12px;">Subscribe for exclusive deals,
+                            new arrivals and style tips.</p>
+                        <div style="display:flex;">
+                            <input type="email" placeholder="Your email address"
+                                style="flex:1;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;padding:9px 12px;font-size:.78rem;font-family:'Outfit',sans-serif;outline:none;">
+                            <button
+                                style="background:var(--rust);border:none;color:#fff;padding:9px 14px;cursor:pointer;font-size:.8rem;"
+                                onmouseover="this.style.background='#b83a1f'"
+                                onmouseout="this.style.background='#e84c2b'"><i
+                                    class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container ft-bot">
+            <div>Copyright &copy; 2025 Stitchman. All Rights Reserved.</div>
+            <div><a href="#">Privacy</a>|<a href="#">Terms</a>|<a href="#">Complaint</a></div>
+        </div>
+    </footer>
+
+    <!-- MOBILE BOTTOM NAV -->
+    <nav class="mob-bot">
+        <div class="mn-i a" onclick="smoothTo('hero')"><i class="fa-solid fa-house"></i><span>Home</span></div>
+        <div class="mn-i" id="mbCat" onclick="openCat()"><i class="fa-solid fa-grip"></i><span>Categories</span></div>
+        <div class="mn-i" onclick="openSearch()"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></div>
+        <div class="mn-i"><i class="fa-regular fa-user"></i><span>Account</span></div>
+        <div class="mn-i"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></div>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 650, once: true, easing: 'ease-out-cubic', offset: 60 });
+
+        const PRODS = {
+            solid: [
+                { n: "Solid Pink Oxford Cotton Full Sleeve Formal Shirt SOL250704", p: 1150, c: "#e3a9c0", t: "solid pink formal", img: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80" },
+                { n: "Solid White Oxford Cotton Formal Shirt SOL250705", p: 1150, c: "#c8c6c0", t: "solid white formal", img: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80" },
+                { n: "Solid Navy Blue Oxford Cotton Formal Shirt SOL250706", p: 1150, c: "#25355c", t: "solid navy formal", img: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80" },
+                { n: "Solid Ash Oxford Cotton Formal Shirt SOL250708", p: 1150, c: "#b9bcc2", t: "solid ash formal", img: "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&auto=format&fit=crop&q=80" },
+                { n: "Solid Purple Oxford Cotton Formal Shirt SOL250709", p: 1150, c: "#5c2a4d", t: "solid purple formal", img: "https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80" },
+            ],
+            stripe: [
+                { n: "Royal Blue Stripe Full Sleeve Cotton Shirt STR260101", p: 1050, c: "#2c5f8a", t: "stripe blue", img: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=600&auto=format&fit=crop&q=80" },
+                { n: "Charcoal Thin Stripe Oxford Cotton Shirt STR260102", p: 1050, c: "#3d3d3d", t: "stripe charcoal", img: "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600&auto=format&fit=crop&q=80" },
+                { n: "Earthy Beige Stripe Full Sleeve Shirt STR260103", p: 1050, c: "#a08060", t: "stripe beige", img: "https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&auto=format&fit=crop&q=80" },
+                { n: "Deep Burgundy Stripe Cotton Shirt STR260104", p: 1050, c: "#6b1a2b", t: "stripe burgundy", img: "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&auto=format&fit=crop&q=80" },
+                { n: "Forest Green Stripe Oxford Shirt STR260105", p: 1050, c: "#2e5940", t: "stripe green", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&auto=format&fit=crop&q=80" },
+            ],
+            check: [
+                { n: "The Viceroy Multi-Tonal Plaid Check Cotton Shirt CHK260201", p: 1050, c: "#8b7355", t: "check plaid", img: "https://images.unsplash.com/photo-1618677603289-0ab35e107567?w=600&auto=format&fit=crop&q=80" },
+                { n: "The Heritage Apex Plaid Check Cotton Shirt CHK260202", p: 1050, c: "#556b8c", t: "check plaid", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80" },
+                { n: "The Monarch Multi-Plaid Check Cotton Shirt CHK260203", p: 1050, c: "#9b7a3c", t: "check plaid", img: "https://images.unsplash.com/photo-1626497746447-38e928ff628f?w=600&auto=format&fit=crop&q=80" },
+                { n: "The Zenith Multi-Plaid Elite Check Shirt CHK260204", p: 1050, c: "#4a6b5c", t: "check plaid", img: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=600&auto=format&fit=crop&q=80" },
+                { n: "The Sovereign Plaid Check Cotton Shirt CHK260205", p: 1050, c: "#6b5880", t: "check plaid", img: "https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80" },
+            ],
+            printed: [
+                { n: "Exclusive Cotton Print Shirt Deep Maroon Base PR260200", p: 1000, c: "#8b2233", t: "printed floral", nb: true, img: "https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=600&auto=format&fit=crop&q=80" },
+                { n: "Exclusive Cotton Print Shirt Earthy Abstract Tones PR260201", p: 1000, c: "#7a6040", t: "printed abstract", nb: true, img: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&auto=format&fit=crop&q=80" },
+                { n: "Exclusive Floral Cotton Print Shirt Teal White PR260202", p: 1000, c: "#2a8080", t: "printed floral teal", nb: true, img: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&auto=format&fit=crop&q=80" },
+                { n: "Exclusive Charcoal Base Print Casual Shirt PR260203", p: 1000, c: "#404040", t: "printed charcoal", nb: true, img: "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600&auto=format&fit=crop&q=80" },
+                { n: "Premium Ash Printed Cotton Poplin Shirt PR260204", p: 1090, c: "#8c9090", t: "printed ash", nb: true, img: "https://images.unsplash.com/photo-1504198266287-1659872e6590?w=600&auto=format&fit=crop&q=80" },
+            ]
+        };
+        const ALL = [...PRODS.solid, ...PRODS.stripe, ...PRODS.check, ...PRODS.printed];
+
+        function formatName(name) {
+            return name.replace(/([A-Z]{2,3}\d{6})/g, '<span style="color:#0066cc; font-weight: 500;">$1</span>');
+        }
+
+        function mkCard(p, i) {
+            const badge = p.nb ? '<span class="prod-badge">New</span>' : '<span class="prod-badge s">Sale</span>';
+            const imgHtml = p.img ? `<img src="${p.img}" alt="${p.n}">` : `<i class="fa-solid fa-shirt ti" style="color:${p.c};"></i>`;
+            return `<div class="col-6 col-md-4" style="flex:0 0 auto;" data-aos="fade-up" data-aos-delay="${i * 55}">
+        <div class="prod-card">
+          ${badge}
+          <div class="prod-thumb">
+            ${imgHtml}
+          </div>
+          <div class="prod-body">
+            <div class="prod-name">${formatName(p.n)}</div>
+            <div class="prod-price">${p.p.toLocaleString()}.00<span style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+            <button class="btn-sel">+ Select Options</button>
+          </div>
+        </div>
+      </div>`;
+        }
+
+        function fillGrid(gridId, cat) {
+            const $g = $('#' + gridId); $g.empty();
+            const isLg = window.innerWidth >= 992;
+            PRODS[cat].forEach((p, i) => {
+                const el = $(mkCard(p, i));
+                if (isLg) el.css({ 'flex': '0 0 20%', 'max-width': '20%' });
+                $g.append(el);
+            });
+        }
+        fillGrid('solidG', 'solid');
+        fillGrid('stripeG', 'stripe');
+        fillGrid('checkG', 'check');
+        fillGrid('printG', 'printed');
+        window.addEventListener('resize', () => {
+            fillGrid('solidG', 'solid'); fillGrid('stripeG', 'stripe');
+            fillGrid('checkG', 'check'); fillGrid('printG', 'printed');
+        });
+
+        // Offcanvas
+        function openCat() { $('#catPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); }
+        function closeCat() { $('#catPanel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
+        $('#openCat,#mobMenu,#mbCat,#dMenuBtn').on('click', openCat);
+        $('#ocX').on('click', closeCat);
+        $('.oc-item[data-go]').on('click', function () { const g = $(this).data('go'); closeCat(); setTimeout(() => smoothTo(g), 340); });
+        $('#ocQ').on('input', function () { const q = this.value.toLowerCase(); $('.oc-item').each(function () { $(this).toggle(!q || $(this).text().toLowerCase().includes(q)); }); });
+
+        // Search
+        function openSearch() { $('#sPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); setTimeout(() => $('#sInp').focus(), 260); }
+        function closeSearch() { $('#sPanel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
+        $('#dSrch,#dSrchBtn,#mobSBtn').on('click', openSearch);
+        $('#sPanelX').on('click', closeSearch);
+        $('#ocBd').on('click', function () { closeCat(); closeSearch(); });
+        let dbt;
+        function doSearch(q) {
+            const $r = $('#sRes');
+            if (!q.trim()) { $r.empty(); return; }
+            $r.html('<div class="text-center py-4 ldots"><span></span><span></span><span></span></div>');
+            clearTimeout(dbt);
+            dbt = setTimeout(() => {
+                const res = ALL.filter(p => p.n.toLowerCase().includes(q.toLowerCase()) || p.t.includes(q.toLowerCase()));
+                if (!res.length) { $r.html('<p style="font-size:.8rem;color:var(--mute);padding:10px 0;">No products found.</p>'); return; }
+                $r.html(res.map(p => `<div class="s-ri"><i class="fa-solid fa-shirt" style="color:${p.c};font-size:2rem;flex-shrink:0;"></i><div><div class="rn">${p.n}</div><div class="rp">${p.p.toLocaleString()}.00&#2547;</div></div></div>`).join(''));
+            }, 280);
+        }
+        $('#sInp').on('input', function () { doSearch(this.value); });
+        $('.stag').on('click', function () { const q = $(this).data('q'); $('#sInp').val(q); doSearch(q); });
+
+        // Sticky shadow
+        window.addEventListener('scroll', () => $('#sHdr').toggleClass('scrolled', window.scrollY > 10));
+
+        // Smooth scroll helper
+        function smoothTo(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+
+        // ESC
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeCat(); closeSearch(); } });
+    </script>
+</body>
+
+</html>
