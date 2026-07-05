@@ -270,6 +270,7 @@ img {
 
 .nav-links {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     align-items: stretch;
     padding: 0;
@@ -473,7 +474,6 @@ img {
 
 .prod-thumb {
     position: relative;
-    background: var(--sand);
     aspect-ratio: 3/4;
     overflow: hidden;
     display: flex;
@@ -486,7 +486,7 @@ img {
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
 }
 
 @media (min-width: 992px) {
@@ -748,7 +748,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 320px;
     max-width: 85vw;
     height: 100%;
     background: #fff;
@@ -1096,4 +1096,157 @@ footer {
 .mn-i.a,
 .mn-i:hover {
     color: var(--rust);
+}
+
+/* OFFCANVAS HEADER & TABS REDESIGN */
+#catMenuPanel .oc-hd {
+    padding: 0 !important;
+    height: 60px;
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: space-between !important;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+}
+
+#catMenuPanel #mobileTab {
+    display: flex !important;
+    flex-grow: 1;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none !important;
+}
+
+#catMenuPanel #mobileTab .nav-item {
+    display: flex;
+    align-items: stretch;
+}
+
+#catMenuPanel #mobileTab .nav-item:first-child {
+    flex: 0 0 60px; /* Square block for hamburger */
+}
+
+#catMenuPanel #mobileTab .nav-item:last-child {
+    flex: 1; /* Fills remaining space */
+}
+
+#catMenuPanel #mobileTab .nav-link {
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Active tab style */
+#catMenuPanel #mobileTab .nav-link.active {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* Inactive tab style */
+#catMenuPanel #mobileTab .nav-link:not(.active) {
+    background-color: #f3f4f6 !important;
+    color: #000 !important;
+}
+
+/* Close button style */
+#catMenuPanel #ocXMenu {
+    flex: 0 0 60px;
+    height: 100%;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6 !important;
+    color: #000 !important;
+    border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#catMenuPanel #ocXMenu:hover {
+    background-color: #e5e7eb !important;
+    color: var(--rust) !important;
+}
+
+/* OFFCANVAS MENU FLOW & DROPDOWN STYLE */
+.oc-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.oc-menu-item:hover {
+    color: var(--rust);
+    padding-left: 26px;
+    background-color: #faf9f6;
+}
+
+.oc-menu-item.active {
+    color: var(--rust);
+}
+
+.oc-menu-dropdown {
+    border-bottom: 1px solid var(--line);
+}
+
+.oc-menu-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 14px 20px;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    text-align: left;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.oc-menu-dropdown-toggle:hover {
+    color: var(--rust);
+    background-color: #faf9f6;
+}
+
+.oc-menu-dropdown-content {
+    display: none;
+    background-color: #faf9f6;
+}
+
+.oc-menu-dropdown-content a {
+    display: block;
+    padding: 10px 20px 10px 36px;
+    color: var(--mute);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.oc-menu-dropdown-content a:hover {
+    color: var(--rust);
+    background-color: #f3f0e8;
+    padding-left: 42px;
 }

@@ -26,7 +26,7 @@
         <div class="oc-hd">
             <!-- <div class="oc-ttl"><i class="fa-solid fa-bars"></i> Menu</div> -->
             <div class="oc-ttl"><i class="fa-solid fa-list-ul"></i> Categories</div>
-            <button class="oc-x" id="ocX"><i class="fa-solid fa-xmark"></i></button>
+            <button class="oc-x" id="ocXCat"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="oc-body">
             <div class="oc-item" data-go="solid">Solid Color Shirts<span class="ct">24</span></div>
@@ -39,57 +39,74 @@
 
     <!-- CATEGORIES & MENU OFFCANVAS -->
     <aside class="oc-panel" id="catMenuPanel">
-        <div class="oc-hd d-flex align-items-center justify-content-between p-3 border-bottom">
+        <div class="oc-hd d-flex align-items-center justify-content-between border-bottom">
 
             <!-- Bootstrap Nav Tabs Triggers -->
             <ul class="nav nav-tabs border-0" id="mobileTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active fw-bold border-0 bg-transparent text-dark" id="nav-tab"
+                    <button class="nav-link active" id="nav-tab"
                         data-bs-toggle="tab" data-bs-target="#panelNav" type="button" role="tab"
                         aria-controls="panelNav" aria-selected="true">
-                        <i class="fa-solid fa-bars me-1"></i> Menu
+                        <i class="fa-solid fa-bars"></i>
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link fw-bold border-0 bg-transparent text-dark" id="cat-tab" data-bs-toggle="tab"
+                    <button class="nav-link" id="cat-tab" data-bs-toggle="tab"
                         data-bs-target="#panelCat" type="button" role="tab" aria-controls="panelCat"
                         aria-selected="false">
-                        Categories
+                        SHOP BY CATEGORIES +
                     </button>
                 </li>
             </ul>
 
-            <button class="oc-x btn border-0 p-0" id="ocX"><i class="fa-solid fa-xmark fs-5"></i></button>
+            <button class="oc-x btn border-0 p-0" id="ocXMenu"><i class="fa-solid fa-xmark fs-5"></i></button>
         </div>
 
-        <div class="oc-body p-3">
+        <div class="oc-body">
             <!-- Bootstrap Tab Content Panels -->
             <div class="tab-content" id="mobileTabContent">
 
                 <!-- Menu Panel (Active by default) -->
                 <div class="tab-pane fade show active" id="panelNav" role="tabpanel" aria-labelledby="nav-tab">
-                    <div class="oc-item py-2 border-bottom">Oxford Cotton</div>
-                    <div class="oc-item py-2 border-bottom">Poplin</div>
-                    <div class="oc-item py-2 border-bottom">Linen Blend</div>
+                    <a href="#" class="oc-menu-item active">Home</a>
+                    <a href="#solid" class="oc-menu-item">Solid color shirts</a>
+                    <a href="#stripe" class="oc-menu-item">Stripe full sleeve</a>
+                    <a href="#check" class="oc-menu-item">Check Full Sleeve</a>
+                    
+                    <div class="oc-menu-dropdown">
+                        <button class="oc-menu-dropdown-toggle">
+                            All Products <i class="fa-solid fa-plus ms-auto toggle-icon"></i>
+                        </button>
+                        <div class="oc-menu-dropdown-content">
+                            <a href="#solid">Solid Color Shirts</a>
+                            <a href="#stripe">Stripe Full Sleeve</a>
+                            <a href="#check">Check Full Sleeve</a>
+                            <a href="#printed">Printed Shirts</a>
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Best Sellers</a>
+                        </div>
+                    </div>
+
+                    <div class="oc-menu-dropdown">
+                        <button class="oc-menu-dropdown-toggle">
+                            Shopping Cart <i class="fa-solid fa-plus ms-auto toggle-icon"></i>
+                        </button>
+                        <div class="oc-menu-dropdown-content">
+                            <a href="#">View Cart</a>
+                            <a href="#">Checkout</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="oc-menu-item">Contact Us</a>
                 </div>
 
                 <!-- Categories Panel -->
                 <div class="tab-pane fade" id="panelCat" role="tabpanel" aria-labelledby="cat-tab">
-                    <div class="oc-item d-flex justify-content-between align-items-center py-2 border-bottom"
-                        data-go="solid">
-                        <span><i class="fa-solid fa-star me-2 text-warning"></i>New Arrivals</span>
-                        <span class="badge bg-secondary rounded-pill">8</span>
-                    </div>
-                    <div class="oc-item d-flex justify-content-between align-items-center py-2 border-bottom"
-                        data-go="solid">
-                        <span><i class="fa-solid fa-fire me-2 text-danger"></i>Best Sellers</span>
-                        <span class="badge bg-secondary rounded-pill">10</span>
-                    </div>
-                    <div class="oc-item d-flex justify-content-between align-items-center py-2 border-bottom"
-                        data-go="printed">
-                        <span><i class="fa-solid fa-tag me-2 text-success"></i>Sale</span>
-                        <span class="badge bg-secondary rounded-pill">6</span>
-                    </div>
+                    <div class="oc-item" data-go="solid">Solid Color Shirts<span class="ct">24</span></div>
+                    <div class="oc-item" data-go="stripe">Stripe Full Sleeve<span class="ct">18</span></div>
+                    <div class="oc-item" data-go="check">Check Full Sleeve<span class="ct">20</span></div>
+                    <div class="oc-item" data-go="half">Half Sleeve<span class="ct">12</span></div>
+                    <div class="oc-item" data-go="printed">Printed Shirts<span class="ct">15</span></div>
                 </div>
 
             </div>
@@ -134,7 +151,6 @@
                             <span>Account</span>
                         </div>
                         <div class="hdr-icon" id="cartIco" style="position:relative;">
-                            <!-- <i class="fa-solid fa-cart-shopping"></i> -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -169,7 +185,16 @@
                             <i class="fa-solid fa-magnifying-glass" style="font-size:1.2rem;"></i>
                         </div>
                         <div class="hdr-icon" id="mobCartBtn" style="position:relative;">
-                            <i class="fa-solid fa-cart-shopping" style="font-size:1.2rem;"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-garden-cart">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M15 17.5a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" />
+                                <path d="M6 8v11a1 1 0 0 0 1.806 .591l3.694 -5.091v.055" />
+                                <path
+                                    d="M6 8h15l-3.5 7l-7.1 -.747a4 4 0 0 1 -3.296 -2.493l-2.853 -7.13a1 1 0 0 0 -.928 -.63h-1.323" />
+                            </svg>
                             <div class="cart-dot">0</div>
                         </div>
                     </div>
@@ -222,18 +247,13 @@
     <!-- CATEGORY CHIPS -->
     <div class="container">
         <div class="chip-strip">
-            <div class="cat-chip" onclick="openCat();smoothTo('solid')"><i
-                    class="fa-solid fa-shirt"></i><span>Solid</span></div>
-            <div class="cat-chip" onclick="openCat();smoothTo('stripe')"><i
-                    class="fa-solid fa-shirt"></i><span>Stripe</span></div>
-            <div class="cat-chip" onclick="openCat();smoothTo('check')"><i
-                    class="fa-solid fa-shirt"></i><span>Check</span></div>
-            <div class="cat-chip" onclick="openCat();smoothTo('printed')"><i
-                    class="fa-solid fa-palette"></i><span>Printed</span></div>
+            <div class="cat-chip" onclick="openCat();smoothTo('solid')"><i class="fa-solid fa-shirt"></i><span>Solid</span></div>
+            <div class="cat-chip" onclick="openCat();smoothTo('stripe')"><i class="fa-solid fa-shirt"></i><span>Stripe</span></div>
+            <div class="cat-chip" onclick="openCat();smoothTo('check')"><i class="fa-solid fa-shirt"></i><span>Check</span></div>
+            <div class="cat-chip" onclick="openCat();smoothTo('printed')"><i class="fa-solid fa-palette"></i><span>Printed</span></div>
             <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-star"></i><span>New Arrival</span></div>
             <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-fire"></i><span>Best Sellers</span></div>
             <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-tag"></i><span>Sale</span></div>
-            <div class="cat-chip" onclick="openCat()"><span>Oxford</span></div>
         </div>
     </div>
 
@@ -511,8 +531,8 @@
 
     <!-- MOBILE BOTTOM NAV -->
     <nav class="mob-bot">
-        <div class="mn-i a" onclick="smoothTo('hero')"><i class="fa-solid fa-house"></i><span>Home</span></div>
-        <div class="mn-i" id="mbCat" onclick="openCat()"><i class="fa-solid fa-grip"></i><span>Categories</span></div>
+        <div class="mn-i" onclick="smoothTo('hero')"><i class="fa-solid fa-house"></i><span>Home</span></div>
+        <div class="mn-i" onclick="openCat()"><i class="fa-solid fa-grip"></i><span>Categories</span></div>
         <div class="mn-i" onclick="openSearch()"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></div>
         <div class="mn-i"><i class="fa-regular fa-user"></i><span>Account</span></div>
         <div class="mn-i"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></div>
@@ -524,71 +544,65 @@
     <script>
         AOS.init({ duration: 650, once: true, easing: 'ease-out-cubic', offset: 60 });
 
-        const PRODS = {
-            solid: [
-                { n: "Solid Pink Oxford Cotton Full Sleeve Formal Shirt SOL250704", p: 1150, c: "#e3a9c0", t: "solid pink formal", img: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80" },
-                { n: "Solid White Oxford Cotton Formal Shirt SOL250705", p: 1150, c: "#c8c6c0", t: "solid white formal", img: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80" },
-                { n: "Solid Navy Blue Oxford Cotton Formal Shirt SOL250706", p: 1150, c: "#25355c", t: "solid navy formal", img: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80" },
-                { n: "Solid Ash Oxford Cotton Formal Shirt SOL250708", p: 1150, c: "#b9bcc2", t: "solid ash formal", img: "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&auto=format&fit=crop&q=80" },
-                { n: "Solid Purple Oxford Cotton Formal Shirt SOL250709", p: 1150, c: "#5c2a4d", t: "solid purple formal", img: "https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80" },
-            ],
-            stripe: [
-                { n: "Royal Blue Stripe Full Sleeve Cotton Shirt STR260101", p: 1050, c: "#2c5f8a", t: "stripe blue", img: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=600&auto=format&fit=crop&q=80" },
-                { n: "Charcoal Thin Stripe Oxford Cotton Shirt STR260102", p: 1050, c: "#3d3d3d", t: "stripe charcoal", img: "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600&auto=format&fit=crop&q=80" },
-                { n: "Earthy Beige Stripe Full Sleeve Shirt STR260103", p: 1050, c: "#a08060", t: "stripe beige", img: "https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&auto=format&fit=crop&q=80" },
-                { n: "Deep Burgundy Stripe Cotton Shirt STR260104", p: 1050, c: "#6b1a2b", t: "stripe burgundy", img: "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&auto=format&fit=crop&q=80" },
-                { n: "Forest Green Stripe Oxford Shirt STR260105", p: 1050, c: "#2e5940", t: "stripe green", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&auto=format&fit=crop&q=80" },
-            ],
-            check: [
-                { n: "The Viceroy Multi-Tonal Plaid Check Cotton Shirt CHK260201", p: 1050, c: "#8b7355", t: "check plaid", img: "https://images.unsplash.com/photo-1618677603289-0ab35e107567?w=600&auto=format&fit=crop&q=80" },
-                { n: "The Heritage Apex Plaid Check Cotton Shirt CHK260202", p: 1050, c: "#556b8c", t: "check plaid", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80" },
-                { n: "The Monarch Multi-Plaid Check Cotton Shirt CHK260203", p: 1050, c: "#9b7a3c", t: "check plaid", img: "https://images.unsplash.com/photo-1626497746447-38e928ff628f?w=600&auto=format&fit=crop&q=80" },
-                { n: "The Zenith Multi-Plaid Elite Check Shirt CHK260204", p: 1050, c: "#4a6b5c", t: "check plaid", img: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=600&auto=format&fit=crop&q=80" },
-                { n: "The Sovereign Plaid Check Cotton Shirt CHK260205", p: 1050, c: "#6b5880", t: "check plaid", img: "https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80" },
-            ],
-            printed: [
-                { n: "Exclusive Cotton Print Shirt Deep Maroon Base PR260200", p: 1000, c: "#8b2233", t: "printed floral", nb: true, img: "https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=600&auto=format&fit=crop&q=80" },
-                { n: "Exclusive Cotton Print Shirt Earthy Abstract Tones PR260201", p: 1000, c: "#7a6040", t: "printed abstract", nb: true, img: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&auto=format&fit=crop&q=80" },
-                { n: "Exclusive Floral Cotton Print Shirt Teal White PR260202", p: 1000, c: "#2a8080", t: "printed floral teal", nb: true, img: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&auto=format&fit=crop&q=80" },
-                { n: "Exclusive Charcoal Base Print Casual Shirt PR260203", p: 1000, c: "#404040", t: "printed charcoal", nb: true, img: "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=600&auto=format&fit=crop&q=80" },
-                { n: "Premium Ash Printed Cotton Poplin Shirt PR260204", p: 1090, c: "#8c9090", t: "printed ash", nb: true, img: "https://images.unsplash.com/photo-1504198266287-1659872e6590?w=600&auto=format&fit=crop&q=80" },
-            ]
-        };
-        const ALL = [...PRODS.solid, ...PRODS.stripe, ...PRODS.check, ...PRODS.printed];
-
         // Offcanvas Category Panel
         function openCat() { $('#catPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); }
-        function closeCat() { $('#catPanel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
 
         // Offcanvas Menu and category panel
-        function openCat() { $('#catMenuPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); }
-        function closeCat() { $('#catMenuPanel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
+        function openCatMenu() { $('#catMenuPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); }
 
-        $('#openCat,#mbCat').on('click', openCat);
-        $('#ocX').on('click', closeCat);
-        $('.oc-item[data-go]').on('click', function () { const g = $(this).data('go'); closeCat(); setTimeout(() => smoothTo(g), 340); });
-        $('#ocQ').on('input', function () { const q = this.value.toLowerCase(); $('.oc-item').each(function () { $(this).toggle(!q || $(this).text().toLowerCase().includes(q)); }); });
+        function closePanels() { $('.oc-panel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
+
+        $('#openCat').on('click', openCat);
+        $('#catMenuPanelBtn').on('click', openCatMenu);
+        $('.oc-x').on('click', closePanels);
+        $('.oc-item[data-go]').on('click', function () { const g = $(this).data('go'); closePanels(); setTimeout(() => smoothTo(g), 340); });
+        $('#ocBd').on('click', closePanels);
+
+        // Offcanvas menu dropdown toggle
+        $('.oc-menu-dropdown-toggle').on('click', function (e) {
+            e.preventDefault();
+            const $parent = $(this).parent('.oc-menu-dropdown');
+            const $content = $parent.find('.oc-menu-dropdown-content');
+            const $icon = $(this).find('.toggle-icon');
+            
+            // Close other dropdowns
+            $('.oc-menu-dropdown').not($parent).removeClass('open').find('.oc-menu-dropdown-content').slideUp(250);
+            $('.oc-menu-dropdown').not($parent).find('.toggle-icon').removeClass('fa-minus').addClass('fa-plus');
+
+            // Toggle current dropdown
+            $parent.toggleClass('open');
+            $content.slideToggle(250);
+            if ($parent.hasClass('open')) {
+                $icon.removeClass('fa-plus').addClass('fa-minus');
+            } else {
+                $icon.removeClass('fa-minus').addClass('fa-plus');
+            }
+        });
+
+        // Close panels and smooth scroll on mobile menu links
+        $('#panelNav .oc-menu-item, #panelNav .oc-menu-dropdown-content a').on('click', function (e) {
+            const href = $(this).attr('href');
+            if (href) {
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    closePanels();
+                    const targetId = href.slice(1);
+                    if (targetId) {
+                        setTimeout(() => smoothTo(targetId), 340);
+                    } else {
+                        setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 340);
+                    }
+                } else if (href === '') {
+                    e.preventDefault();
+                }
+            }
+        });
 
         // Search
         function openSearch() { $('#sPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); setTimeout(() => $('#sInp').focus(), 260); }
         function closeSearch() { $('#sPanel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
         $('#mobSBtn').on('click', openSearch);
         $('#sPanelX').on('click', closeSearch);
-        $('#ocBd').on('click', function () { closeCat(); closeSearch(); });
-        let dbt;
-        function doSearch(q) {
-            const $r = $('#sRes');
-            if (!q.trim()) { $r.empty(); return; }
-            $r.html('<div class="text-center py-4 ldots"><span></span><span></span><span></span></div>');
-            clearTimeout(dbt);
-            dbt = setTimeout(() => {
-                const res = ALL.filter(p => p.n.toLowerCase().includes(q.toLowerCase()) || p.t.includes(q.toLowerCase()));
-                if (!res.length) { $r.html('<p style="font-size:.8rem;color:var(--mute);padding:10px 0;">No products found.</p>'); return; }
-                $r.html(res.map(p => `<div class="s-ri"><i class="fa-solid fa-shirt" style="color:${p.c};font-size:2rem;flex-shrink:0;"></i><div><div class="rn">${p.n}</div><div class="rp">${p.p.toLocaleString()}.00&#2547;</div></div></div>`).join(''));
-            }, 280);
-        }
-        $('#sInp').on('input', function () { doSearch(this.value); });
-        $('.stag').on('click', function () { const q = $(this).data('q'); $('#sInp').val(q); doSearch(q); });
 
         // Desktop floating menu control
         function isDesktop() {
