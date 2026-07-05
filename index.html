@@ -5,1197 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stitchman | Men's Style - Premium Cotton Shirts</title>
-    <meta name="description"
-        content="Stitchman Men's Style - shop exclusive lightweight cotton shirts: solid, stripe, check, and printed collections. Free delivery over 2000 BDT.">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <meta name="description" content="Stitchman Men's Style">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <style>
-        :root {
-            --ink: #111010;
-            --rust: #e84c2b;
-            --rust-d: #b83a1f;
-            --olive: #5c6650;
-            --sand: #f0ebe0;
-            --cream: #faf8f4;
-            --line: #e4ddd0;
-            --white: #ffffff;
-            --mute: #6b6560;
-            --hh: 64px;
-            --nh: 44px;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Outfit', sans-serif;
-            background: var(--cream);
-            color: var(--ink);
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        .df {
-            font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 1.5px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--rust);
-            border-radius: 4px;
-        }
-
-        /* TOPBAR */
-        .topbar {
-            background: var(--ink);
-            color: rgba(255, 255, 255, .8);
-            font-size: .67rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-align: center;
-            padding: 8px 12px;
-            white-space: nowrap;
-            overflow-x: auto;
-        }
-
-        .topbar strong {
-            color: var(--rust);
-        }
-
-        /* HEADER */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 900;
-            background: #fff;
-            border-bottom: 1px solid var(--line);
-            height: var(--hh);
-            display: flex;
-            align-items: center;
-            transition: box-shadow .3s;
-        }
-
-        .site-header.scrolled {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
-        }
-
-        .brand-mark {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.7rem;
-            line-height: 1;
-            border: 2px solid var(--ink);
-            padding: 4px 12px;
-            display: inline-flex;
-            flex-direction: column;
-            gap: 1px;
-            transition: .25s;
-        }
-
-        .brand-mark small {
-            font-family: 'Outfit', sans-serif;
-            font-size: .42rem;
-            letter-spacing: 3.5px;
-            color: var(--rust);
-            font-weight: 600;
-        }
-
-        .brand-mark:hover {
-            background: var(--ink);
-            color: #fff;
-        }
-
-        .hdr-search {
-            position: relative;
-            flex: 1;
-            max-width: 500px;
-        }
-
-        .hdr-search input {
-            width: 100%;
-            border: 1.5px solid var(--line);
-            background: var(--cream);
-            padding: 9px 44px 9px 14px;
-            font-size: .83rem;
-            font-family: 'Outfit', sans-serif;
-            outline: none;
-            transition: border-color .2s;
-        }
-
-        .hdr-search input:focus {
-            border-color: var(--rust);
-            background: #fff;
-        }
-
-        .hdr-search button {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 44px;
-            background: var(--ink);
-            border: none;
-            color: #fff;
-            cursor: pointer;
-            transition: .2s;
-        }
-
-        .hdr-search button:hover {
-            background: var(--rust);
-        }
-
-        .hdr-icons {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .hdr-icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2px;
-            font-size: .6rem;
-            letter-spacing: .5px;
-            color: var(--ink);
-            cursor: pointer;
-            transition: color .2s;
-            position: relative;
-        }
-
-        .hdr-icon i {
-            font-size: 1.1rem;
-        }
-
-        .hdr-icon:hover {
-            color: var(--rust);
-        }
-
-        .cart-dot {
-            position: absolute;
-            top: -5px;
-            right: -7px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--rust);
-            color: #fff;
-            font-size: .52rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
-
-        .mob-sb {
-            display: none;
-        }
-
-        /* MAIN NAV */
-        .main-nav {
-            background: #fff;
-            border-bottom: 1px solid var(--line);
-            height: var(--nh);
-            display: flex;
-            align-items: stretch;
-            position: sticky;
-            top: var(--hh);
-            z-index: 890;
-        }
-
-        .main-nav .inner {
-            display: flex;
-            align-items: stretch;
-            width: 100%;
-        }
-
-        .cat-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--rust);
-            color: #fff;
-            border: none;
-            padding: 0 18px;
-            font-family: 'Outfit', sans-serif;
-            font-size: .7rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: background .2s;
-            flex-shrink: 0;
-        }
-
-        .cat-btn:hover {
-            background: var(--rust-d);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            align-items: stretch;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-links li {
-            display: flex;
-            align-items: stretch;
-        }
-
-        .nav-links a {
-            display: flex;
-            align-items: center;
-            padding: 0 13px;
-            font-size: .7rem;
-            font-weight: 500;
-            letter-spacing: .4px;
-            text-transform: uppercase;
-            color: var(--ink);
-            transition: .2s;
-            border-bottom: 2px solid transparent;
-            white-space: nowrap;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--rust);
-            border-bottom-color: var(--rust);
-        }
-
-        .nav-drop {
-            position: relative;
-        }
-
-        .nav-drop>a::after {
-            content: "\f107";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            margin-left: 5px;
-            font-size: .6rem;
-        }
-
-        .drop-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            min-width: 180px;
-            background: #fff;
-            border: 1px solid var(--line);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(12px);
-            transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.25s;
-            z-index: 999;
-            padding: 6px 0;
-        }
-
-        .nav-drop:hover .drop-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .drop-menu a {
-            display: block;
-            padding: 8px 16px;
-            font-size: .75rem;
-            font-weight: 500;
-            border-bottom: none;
-            text-transform: none;
-            letter-spacing: 0;
-            color: var(--ink);
-            transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
-        }
-
-        .drop-menu a:hover {
-            background: #f5f7fa;
-            color: var(--rust);
-            padding-left: 22px;
-        }
-
-        /* HERO */
-        #hero {
-            margin-top: 16px;
-            margin-bottom: 20px;
-        }
-
-        .hero-banner-link {
-            display: block;
-            overflow: hidden;
-        }
-
-        .hero-banner-link img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .hero-banner-link:hover img {
-            transform: scale(1.01);
-        }
-
-        /* CAT CHIPS */
-        .chip-strip {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding: 26px 0 4px;
-            scrollbar-width: none;
-        }
-
-        .chip-strip::-webkit-scrollbar {
-            display: none;
-        }
-
-        .cat-chip {
-            flex: 0 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            background: #fff;
-            border: 1.5px solid var(--line);
-            padding: 14px 18px;
-            cursor: pointer;
-            transition: .25s;
-            min-width: 90px;
-        }
-
-        .cat-chip i {
-            font-size: 1.3rem;
-            color: var(--rust);
-        }
-
-        .cat-chip span {
-            font-size: .65rem;
-            font-weight: 600;
-            letter-spacing: .5px;
-            text-transform: uppercase;
-            color: var(--ink);
-        }
-
-        .cat-chip:hover {
-            border-color: var(--rust);
-            background: var(--rust);
-        }
-
-        .cat-chip:hover i,
-        .cat-chip:hover span {
-            color: #fff;
-        }
-
-        /* SECTION HEAD */
-        .sec-head {
-            text-align: center;
-            padding: 44px 0 28px;
-        }
-
-        .sec-head h2 {
-            font-size: clamp(1.8rem, 4vw, 2.6rem);
-            display: inline-block;
-            position: relative;
-        }
-
-        .sec-head h2::after {
-            content: '';
-            display: block;
-            width: 48px;
-            height: 3px;
-            background: var(--rust);
-            margin: 10px auto 0;
-        }
-
-        .sec-head p {
-            margin-top: 10px;
-            font-size: .83rem;
-            color: var(--mute);
-            max-width: 440px;
-            margin-inline: auto;
-        }
-
-        /* PRODUCT CARD */
-        .prod-card {
-            background: #fff;
-            border: 1px solid var(--line);
-            overflow: hidden;
-            transition: transform .3s, box-shadow .3s;
-            cursor: pointer;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .prod-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 16px 32px rgba(0, 0, 0, .09);
-        }
-
-        .prod-thumb {
-            position: relative;
-            background: var(--sand);
-            aspect-ratio: 3/4;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .prod-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .prod-card:hover .prod-thumb img {
-            transform: scale(1.04);
-        }
-
-        .prod-badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: var(--rust);
-            color: #fff;
-            font-size: .58rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 3px 9px;
-            z-index: 2;
-        }
-
-        .prod-badge.s {
-            background: var(--olive);
-        }
-
-        .prod-body {
-            padding: 12px 14px 14px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .prod-name {
-            font-size: .78rem;
-            font-weight: 500;
-            line-height: 1.45;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            flex: 1;
-        }
-
-        .prod-price {
-            margin-top: 6px;
-            font-size: .92rem;
-            font-weight: 700;
-            color: var(--ink);
-        }
-
-        .btn-sel {
-            margin-top: 12px;
-            background: #f1f3f6;
-            border: none;
-            color: var(--ink);
-            width: 100%;
-            padding: 9px 0;
-            font-size: .68rem;
-            font-weight: 700;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background 0.25s, color 0.25s;
-        }
-
-        .btn-sel:hover {
-            background: var(--ink);
-            color: #fff;
-        }
-
-        /* BROWSE */
-        .browse-w {
-            text-align: center;
-            padding: 28px 0 52px;
-        }
-
-        .btn-br {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: 1.5px solid var(--ink);
-            color: var(--ink);
-            padding: 11px 26px;
-            font-size: .75rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: .25s;
-            background: transparent;
-        }
-
-        .btn-br:hover {
-            background: var(--ink);
-            color: #fff;
-        }
-
-        /* PROMO */
-        .promo {
-            background: var(--ink);
-            padding: 60px 24px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .promo::before {
-            content: 'STITCHMAN';
-            position: absolute;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 18vw;
-            color: rgba(255, 255, 255, .03);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            white-space: nowrap;
-            pointer-events: none;
-        }
-
-        .promo h2 {
-            font-size: clamp(2rem, 5vw, 3.6rem);
-            color: #fff;
-            margin-bottom: 12px;
-        }
-
-        .promo h2 .r {
-            color: var(--rust);
-        }
-
-        .promo p {
-            color: rgba(255, 255, 255, .6);
-            font-size: .85rem;
-            max-width: 400px;
-            margin: 0 auto 26px;
-            line-height: 1.75;
-        }
-
-        .btn-pr {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: 1.5px solid var(--rust);
-            color: var(--rust);
-            padding: 12px 30px;
-            font-size: .75rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: .25s;
-            background: transparent;
-        }
-
-        .btn-pr:hover {
-            background: var(--rust);
-            color: #fff;
-        }
-
-        /* FEATURES */
-        .features {
-            background: #fff;
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-            padding: 28px 0;
-        }
-
-        .feat-i {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 12px 20px;
-        }
-
-        .feat-i i {
-            font-size: 1.6rem;
-            color: var(--rust);
-            flex-shrink: 0;
-        }
-
-        .feat-i h6 {
-            font-size: .78rem;
-            font-weight: 700;
-            margin-bottom: 2px;
-        }
-
-        .feat-i p {
-            font-size: .68rem;
-            color: var(--mute);
-            margin: 0;
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--ink);
-            color: rgba(255, 255, 255, .6);
-        }
-
-        .ft {
-            padding: 52px 0 36px;
-            border-bottom: 1px solid rgba(255, 255, 255, .08);
-        }
-
-        .ft .brand-mark {
-            border-color: rgba(255, 255, 255, .25);
-            color: #fff;
-        }
-
-        .ft .brand-mark:hover {
-            background: var(--rust);
-            border-color: var(--rust);
-        }
-
-        .ft-about {
-            font-size: .78rem;
-            line-height: 1.75;
-            margin-top: 14px;
-            max-width: 240px;
-        }
-
-        .ft-col h6 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-bottom: 14px;
-        }
-
-        .ft-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .ft-col ul li {
-            margin-bottom: 8px;
-        }
-
-        .ft-col ul a {
-            font-size: .78rem;
-            color: rgba(255, 255, 255, .6);
-            transition: color .2s;
-        }
-
-        .ft-col ul a:hover {
-            color: var(--rust);
-        }
-
-        .soc {
-            display: flex;
-            gap: 10px;
-            margin-top: 14px;
-        }
-
-        .soc a {
-            width: 36px;
-            height: 36px;
-            border: 1px solid rgba(255, 255, 255, .2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, .6);
-            font-size: .9rem;
-            transition: .2s;
-        }
-
-        .soc a:hover {
-            border-color: var(--rust);
-            color: var(--rust);
-        }
-
-        .ft-bot {
-            padding: 18px 0;
-            font-size: .7rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .ft-bot a {
-            color: rgba(255, 255, 255, .5);
-            margin: 0 6px;
-        }
-
-        .ft-bot a:hover {
-            color: var(--rust);
-        }
-
-        /* OFFCANVAS */
-        .oc-bd {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, .45);
-            z-index: 1100;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .3s;
-        }
-
-        .oc-bd.show {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .oc-panel {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 300px;
-            max-width: 85vw;
-            height: 100%;
-            background: #fff;
-            z-index: 1101;
-            transform: translateX(-100%);
-            transition: transform .32s cubic-bezier(.4, 0, .2, 1);
-            display: flex;
-            flex-direction: column;
-            box-shadow: 6px 0 30px rgba(0, 0, 0, .12);
-        }
-
-        .oc-panel.open {
-            transform: translateX(0);
-        }
-
-        .oc-hd {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 20px;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .oc-ttl {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.3rem;
-            letter-spacing: 2px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .oc-ttl i {
-            color: var(--rust);
-        }
-
-        .oc-x {
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            color: var(--ink);
-            cursor: pointer;
-            padding: 4px 8px;
-            transition: color .2s;
-        }
-
-        .oc-x:hover {
-            color: var(--rust);
-        }
-
-        .oc-si {
-            padding: 14px 20px;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .oc-si input {
-            width: 100%;
-            border: 1.5px solid var(--line);
-            padding: 8px 12px;
-            font-size: .8rem;
-            font-family: 'Outfit', sans-serif;
-            outline: none;
-        }
-
-        .oc-si input:focus {
-            border-color: var(--rust);
-        }
-
-        .oc-body {
-            flex: 1;
-            overflow-y: auto;
-            padding: 10px 0;
-        }
-
-        .oc-lbl {
-            font-size: .6rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--mute);
-            padding: 12px 20px 6px;
-        }
-
-        .oc-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 11px 20px;
-            color: var(--ink);
-            font-size: .85rem;
-            font-weight: 500;
-            border-bottom: 1px solid #f5f2ec;
-            cursor: pointer;
-            transition: .2s;
-        }
-
-        .oc-item i {
-            width: 20px;
-            text-align: center;
-            color: var(--rust);
-            font-size: .9rem;
-        }
-
-        .oc-item:hover {
-            background: var(--rust);
-            color: #fff;
-            padding-left: 28px;
-        }
-
-        .oc-item:hover i {
-            color: #fff;
-        }
-
-        .oc-item .ct {
-            margin-left: auto;
-            font-size: .65rem;
-            background: var(--sand);
-            padding: 2px 7px;
-            color: var(--mute);
-        }
-
-        .oc-item:hover .ct {
-            background: rgba(255, 255, 255, .2);
-            color: #fff;
-        }
-
-        /* SEARCH PANEL */
-        .s-panel {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 360px;
-            max-width: 95vw;
-            height: 100%;
-            background: #fff;
-            z-index: 1101;
-            transform: translateX(100%);
-            transition: transform .32s cubic-bezier(.4, 0, .2, 1);
-            display: flex;
-            flex-direction: column;
-            box-shadow: -6px 0 30px rgba(0, 0, 0, .1);
-        }
-
-        .s-panel.open {
-            transform: translateX(0);
-        }
-
-        .s-hd {
-            padding: 18px 20px;
-            border-bottom: 1px solid var(--line);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .s-hd h6 {
-            font-size: .7rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--mute);
-        }
-
-        .s-in {
-            padding: 16px 20px;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .s-in input {
-            width: 100%;
-            border: 1.5px solid var(--line);
-            padding: 10px 14px;
-            font-size: .9rem;
-            font-family: 'Outfit', sans-serif;
-            outline: none;
-        }
-
-        .s-in input:focus {
-            border-color: var(--rust);
-        }
-
-        .s-tags {
-            padding: 14px 20px;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .s-tags p {
-            font-size: .6rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--mute);
-            margin-bottom: 8px;
-        }
-
-        .stag {
-            display: inline-block;
-            border: 1px solid var(--line);
-            background: var(--sand);
-            padding: 4px 12px;
-            font-size: .68rem;
-            margin: 3px 3px 0 0;
-            cursor: pointer;
-            transition: .2s;
-        }
-
-        .stag:hover {
-            background: var(--rust);
-            color: #fff;
-            border-color: var(--rust);
-        }
-
-        .s-res {
-            flex: 1;
-            overflow-y: auto;
-            padding: 14px 20px;
-        }
-
-        .s-ri {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0;
-            border-bottom: 1px solid #f5f2ec;
-        }
-
-        .s-ri .rn {
-            font-size: .75rem;
-            font-weight: 500;
-        }
-
-        .s-ri .rp {
-            font-size: .72rem;
-            color: var(--rust-d);
-            font-weight: 700;
-        }
-
-        .ldots span {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--rust);
-            margin: 0 2px;
-            animation: blink 1.2s infinite;
-        }
-
-        .ldots span:nth-child(2) {
-            animation-delay: .2s;
-        }
-
-        .ldots span:nth-child(3) {
-            animation-delay: .4s;
-        }
-
-        @keyframes blink {
-
-            0%,
-            80%,
-            100% {
-                opacity: .2;
-            }
-
-            40% {
-                opacity: 1;
-            }
-        }
-
-        /* MOBILE */
-        @media(max-width:767px) {
-            :root {
-                --hh: 56px;
-                --nh: 0px;
-            }
-
-            .main-nav {
-                display: none !important;
-            }
-
-            /* Desktop header row hidden on mobile (handled by d-none d-md-flex) */
-            .hdr-desktop {
-                display: none !important;
-            }
-
-            .brand-mark {
-                font-size: 1.3rem;
-                padding: 3px 8px;
-            }
-
-            .brand-mark small {
-                font-size: .38rem;
-            }
-
-            /* Hero image — cover full area, position top so faces show */
-            .hero-img {
-                object-position: center top;
-                width: 100%;
-                height: 100%;
-            }
-
-            .hero-cnt {
-                padding: 0 20px;
-            }
-
-            .hero-title {
-                font-size: 2.6rem;
-            }
-
-            .hero-sub {
-                font-size: .8rem;
-            }
-
-            .sec-head {
-                padding: 32px 0 20px;
-            }
-
-            .ft {
-                padding: 36px 0 24px;
-            }
-
-            .ft-about {
-                max-width: 100%;
-            }
-
-            body {
-                padding-bottom: 62px;
-            }
-        }
-
-        .mob-bot {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #fff;
-            border-top: 1px solid var(--line);
-            z-index: 800;
-            padding: 6px 0 env(safe-area-inset-bottom, 6px);
-        }
-
-        @media(max-width:767px) {
-            .mob-bot {
-                display: flex;
-            }
-        }
-
-        .mn-i {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 3px;
-            padding: 6px 0;
-            font-size: .58rem;
-            font-weight: 600;
-            letter-spacing: .4px;
-            text-transform: uppercase;
-            color: var(--mute);
-            cursor: pointer;
-            transition: color .2s;
-        }
-
-        .mn-i i {
-            font-size: 1.1rem;
-        }
-
-        .mn-i.a,
-        .mn-i:hover {
-            color: var(--rust);
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="topbar">Free delivery on orders over <strong>2000 BDT</strong>&nbsp;|&nbsp;New Oxford Cotton arrivals
-        every week&nbsp;|&nbsp;Premium quality guaranteed</div>
+    <div class="topbar">Free delivery on orders over <strong>2000 BDT</strong></div>
 
     <div class="oc-bd" id="ocBd"></div>
 
     <!-- CATEGORIES OFFCANVAS -->
-    <aside class="oc-panel" id="catPanel" aria-label="Categories">
+    <aside class="oc-panel" id="catPanel">
         <div class="oc-hd">
-            <div class="oc-ttl"><i class="fa-solid fa-grip"></i> Categories</div>
+            <!-- <div class="oc-ttl"><i class="fa-solid fa-bars"></i> Menu</div> -->
+            <div class="oc-ttl"><i class="fa-solid fa-list-ul"></i> Categories</div>
             <button class="oc-x" id="ocX"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="oc-si"><input type="text" placeholder="Search category..." id="ocQ"></div>
         <div class="oc-body">
-            <div class="oc-lbl">Shirt Types</div>
-            <div class="oc-item" data-go="solid"><i class="fa-solid fa-shirt"></i>Solid Color Shirts<span
-                    class="ct">24</span></div>
-            <div class="oc-item" data-go="stripe"><i class="fa-solid fa-shirt"></i>Stripe Full Sleeve<span
-                    class="ct">18</span></div>
-            <div class="oc-item" data-go="check"><i class="fa-solid fa-shirt"></i>Check Full Sleeve<span
-                    class="ct">20</span></div>
-            <div class="oc-item" data-go="half"><i class="fa-solid fa-shirt"></i>Half Sleeve<span class="ct">12</span>
+            <div class="oc-item" data-go="solid">Solid Color Shirts<span class="ct">24</span></div>
+            <div class="oc-item" data-go="stripe">Stripe Full Sleeve<span class="ct">18</span></div>
+            <div class="oc-item" data-go="check">Check Full Sleeve<span class="ct">20</span></div>
+            <div class="oc-item" data-go="half">Half Sleeve<span class="ct">12</span></div>
+            <div class="oc-item" data-go="printed">Printed Shirts<span class="ct">15</span></div>
+        </div>
+    </aside>
+
+    <!-- CATEGORIES & MENU OFFCANVAS -->
+    <aside class="oc-panel" id="catMenuPanel">
+        <div class="oc-hd d-flex align-items-center justify-content-between p-3 border-bottom">
+
+            <!-- Bootstrap Nav Tabs Triggers -->
+            <ul class="nav nav-tabs border-0" id="mobileTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-bold border-0 bg-transparent text-dark" id="nav-tab"
+                        data-bs-toggle="tab" data-bs-target="#panelNav" type="button" role="tab"
+                        aria-controls="panelNav" aria-selected="true">
+                        <i class="fa-solid fa-bars me-1"></i> Menu
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold border-0 bg-transparent text-dark" id="cat-tab" data-bs-toggle="tab"
+                        data-bs-target="#panelCat" type="button" role="tab" aria-controls="panelCat"
+                        aria-selected="false">
+                        Categories
+                    </button>
+                </li>
+            </ul>
+
+            <button class="oc-x btn border-0 p-0" id="ocX"><i class="fa-solid fa-xmark fs-5"></i></button>
+        </div>
+
+        <div class="oc-body p-3">
+            <!-- Bootstrap Tab Content Panels -->
+            <div class="tab-content" id="mobileTabContent">
+
+                <!-- Menu Panel (Active by default) -->
+                <div class="tab-pane fade show active" id="panelNav" role="tabpanel" aria-labelledby="nav-tab">
+                    <div class="oc-item py-2 border-bottom">Oxford Cotton</div>
+                    <div class="oc-item py-2 border-bottom">Poplin</div>
+                    <div class="oc-item py-2 border-bottom">Linen Blend</div>
+                </div>
+
+                <!-- Categories Panel -->
+                <div class="tab-pane fade" id="panelCat" role="tabpanel" aria-labelledby="cat-tab">
+                    <div class="oc-item d-flex justify-content-between align-items-center py-2 border-bottom"
+                        data-go="solid">
+                        <span><i class="fa-solid fa-star me-2 text-warning"></i>New Arrivals</span>
+                        <span class="badge bg-secondary rounded-pill">8</span>
+                    </div>
+                    <div class="oc-item d-flex justify-content-between align-items-center py-2 border-bottom"
+                        data-go="solid">
+                        <span><i class="fa-solid fa-fire me-2 text-danger"></i>Best Sellers</span>
+                        <span class="badge bg-secondary rounded-pill">10</span>
+                    </div>
+                    <div class="oc-item d-flex justify-content-between align-items-center py-2 border-bottom"
+                        data-go="printed">
+                        <span><i class="fa-solid fa-tag me-2 text-success"></i>Sale</span>
+                        <span class="badge bg-secondary rounded-pill">6</span>
+                    </div>
+                </div>
+
             </div>
-            <div class="oc-item" data-go="printed"><i class="fa-solid fa-palette"></i>Printed Shirts<span
-                    class="ct">15</span></div>
-            <div class="oc-lbl">Collections</div>
-            <div class="oc-item" data-go="solid"><i class="fa-solid fa-star"></i>New Arrivals<span class="ct">8</span>
-            </div>
-            <div class="oc-item" data-go="solid"><i class="fa-solid fa-fire"></i>Best Sellers<span class="ct">10</span>
-            </div>
-            <div class="oc-item" data-go="printed"><i class="fa-solid fa-tag"></i>Sale<span class="ct">6</span></div>
-            <div class="oc-lbl">Fabric</div>
-            <div class="oc-item"><i class="fa-solid fa-leaf"></i>Oxford Cotton</div>
-            <div class="oc-item"><i class="fa-solid fa-leaf"></i>Poplin</div>
-            <div class="oc-item"><i class="fa-solid fa-leaf"></i>Linen Blend</div>
         </div>
     </aside>
 
@@ -1222,24 +119,36 @@
     <header class="site-header" id="sHdr">
         <div class="container">
             <!-- DESKTOP: logo | search (center) | icons -->
-            <div class="hdr-desktop d-none d-md-flex align-items-center w-100" style="gap:0;">
+            <div class="hdr-desktop d-none d-md-flex align-items-center w-100">
                 <div style="flex:1;display:flex;align-items:center;">
-                    <a href="#" class="brand-mark">stitchman<small>MEN'S STYLE</small></a>
+                    <img src="images/stitchman-white-logo-2.png" alt="Stitchman Logo" style="height:65px;">
                 </div>
-                <div class="hdr-search" style="flex:0 0 440px;max-width:440px;">
-                    <input type="text" placeholder="Search for products" id="dSrch">
-                    <button id="dSrchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="hdr-search">
+                    <input type="text" placeholder="Search for products" />
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <div style="flex:1;display:flex;justify-content:flex-end;">
                     <div class="hdr-icons">
-                        <div class="hdr-icon"><i class="fa-regular fa-user"></i><span>Account</span></div>
+                        <div class="hdr-icon">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Account</span>
+                        </div>
                         <div class="hdr-icon" id="cartIco" style="position:relative;">
-                            <i class="fa-solid fa-cart-shopping"></i><span>Cart</span>
+                            <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-garden-cart">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M15 17.5a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" />
+                                <path d="M6 8v11a1 1 0 0 0 1.806 .591l3.694 -5.091v.055" />
+                                <path
+                                    d="M6 8h15l-3.5 7l-7.1 -.747a4 4 0 0 1 -3.296 -2.493l-2.853 -7.13a1 1 0 0 0 -.928 -.63h-1.323" />
+                            </svg>
                             <div class="cart-dot" id="cCnt">0</div>
                         </div>
                         <div class="hdr-icon" id="dMenuBtn">
-                            <i class="fa-solid fa-bars" style="font-size:1.15rem;"></i>
-                            <span>Menu</span>
+                            <i class="fa-solid fa-bars" style="font-size:20px;"></i>
                         </div>
                     </div>
                 </div>
@@ -1247,12 +156,12 @@
             <!-- MOBILE: hamburger | logo (center) | search + cart -->
             <div class="hdr-mobile d-flex d-md-none align-items-center w-100">
                 <div style="flex: 1; display: flex; justify-content: flex-start; align-items: center;">
-                    <div class="hdr-icon" id="mobMenu">
+                    <div class="hdr-icon" id="catMenuPanelBtn">
                         <i class="fa-solid fa-bars" style="font-size:1.3rem;"></i>
                     </div>
                 </div>
                 <div style="flex: 0 0 auto; display: flex; justify-content: center; align-items: center;">
-                    <a href="#" class="brand-mark">stitchman<small>MEN'S STYLE</small></a>
+                    <img src="images/stitchman-white-logo-2.png" alt="Stitchman Logo" style="height:50px;">
                 </div>
                 <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center;">
                     <div class="hdr-icons" style="gap:14px;">
@@ -1324,7 +233,7 @@
             <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-star"></i><span>New Arrival</span></div>
             <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-fire"></i><span>Best Sellers</span></div>
             <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-tag"></i><span>Sale</span></div>
-            <div class="cat-chip" onclick="openCat()"><i class="fa-solid fa-leaf"></i><span>Oxford</span></div>
+            <div class="cat-chip" onclick="openCat()"><span>Oxford</span></div>
         </div>
     </div>
 
@@ -1333,30 +242,170 @@
         <div class="container">
             <div class="sec-head" data-aos="fade-up">
                 <h2>New Colors</h2>
-                <p>Pure Oxford Cotton crafted for the modern gentleman who demands excellence.</p>
             </div>
-            <div class="row g-3" id="solidG"></div>
-            <div class="browse-w"><button class="btn-br">Browse All Solid Shirts <i
-                        class="fa-solid fa-arrow-right"></i></button></div>
+            <div class="row g-3" id="solidG">
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80"
+                                alt="Solid Pink Oxford Cotton Full Sleeve Formal Shirt SOL250704"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Solid Pink Oxford Cotton Full Sleeve Formal Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">SOL250704</span></div>
+                            <div class="prod-price">1,150.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80"
+                                alt="Solid White Oxford Cotton Formal Shirt SOL250705"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Solid White Oxford Cotton Formal Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">SOL250705</span></div>
+                            <div class="prod-price">1,150.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80"
+                                alt="Solid Navy Blue Oxford Cotton Formal Shirt SOL250706"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Solid Navy Blue Oxford Cotton Formal Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">SOL250706</span></div>
+                            <div class="prod-price">1,150.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&auto=format&fit=crop&q=80"
+                                alt="Solid Ash Oxford Cotton Formal Shirt SOL250708"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Solid Ash Oxford Cotton Formal Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">SOL250708</span></div>
+                            <div class="prod-price">1,150.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1620012253295-c05518e99309?w=600&auto=format&fit=crop&q=80"
+                                alt="Solid Purple Oxford Cotton Formal Shirt SOL250709"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Solid Purple Oxford Cotton Formal Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">SOL250709</span></div>
+                            <div class="prod-price">1,150.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- PROMO -->
-    <div class="promo" data-aos="fade-up">
-        <h2>Created For <span class="r">The Modern</span> Gentleman</h2>
-        <p>Every stitch tells a story of precision craftsmanship and premium comfort from boardroom to casual evenings.
-        </p>
-        <button class="btn-pr">Explore Collection <i class="fa-solid fa-arrow-right"></i></button>
-    </div>
 
     <!-- STRIPE -->
     <section id="stripe">
         <div class="container">
             <div class="sec-head" data-aos="fade-up">
                 <h2>New Stripe</h2>
-                <p>Bold lines, refined style &mdash; the stripe collection for the sophisticated man.</p>
             </div>
-            <div class="row g-3" id="stripeG"></div>
+            <div class="row g-3" id="stripeG">
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=600&auto=format&fit=crop&q=80"
+                                alt="Royal Blue Stripe Full Sleeve Cotton Shirt STR260101"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Royal Blue Stripe Full Sleeve Cotton Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">STR260101</span></div>
+                            <div class="prod-price">1,050.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600&auto=format&fit=crop&q=80"
+                                alt="Charcoal Thin Stripe Oxford Cotton Shirt STR260102"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Charcoal Thin Stripe Oxford Cotton Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">STR260102</span></div>
+                            <div class="prod-price">1,050.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&auto=format&fit=crop&q=80"
+                                alt="Earthy Beige Stripe Full Sleeve Shirt STR260103"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Earthy Beige Stripe Full Sleeve Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">STR260103</span></div>
+                            <div class="prod-price">1,050.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&auto=format&fit=crop&q=80"
+                                alt="Deep Burgundy Stripe Cotton Shirt STR260104"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Deep Burgundy Stripe Cotton Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">STR260104</span></div>
+                            <div class="prod-price">1,050.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 product-col" data-aos="fade-up">
+                    <div class="prod-card">
+                        <span class="prod-badge s">Sale</span>
+                        <div class="prod-thumb"><img
+                                src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&auto=format&fit=crop&q=80"
+                                alt="Forest Green Stripe Oxford Shirt STR260105"></div>
+                        <div class="prod-body">
+                            <div class="prod-name">Forest Green Stripe Oxford Shirt <span
+                                    style="color:#0066cc; font-weight: 500;">STR260105</span></div>
+                            <div class="prod-price">1,050.00<span
+                                    style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
+                            <button class="btn-sel">+ Select Options</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="browse-w"><button class="btn-br">Browse All Stripe Shirts <i
                         class="fa-solid fa-arrow-right"></i></button></div>
         </div>
@@ -1408,9 +457,8 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-12 col-md-4 col-lg-3">
-                        <a href="#" class="brand-mark">stitchman<small>MEN'S STYLE</small></a>
-                        <p class="ft-about">Premium shirts crafted from the finest Oxford Cotton. Designed for the
-                            modern gentleman who demands style and comfort.</p>
+                        <img src="images/stitchman-white-logo-2.png" alt="Stitchman Logo">
+                        <p class="ft-about">Premium shirts crafted from the finest Oxford Cotton.</p>
                         <div class="soc">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -1426,8 +474,6 @@
                             <li><a href="#check">Check Full Sleeve</a></li>
                             <li><a href="#printed">Printed Shirts</a></li>
                             <li><a href="#">Half Sleeve</a></li>
-                            <li><a href="#">New Arrivals</a></li>
-                            <li><a href="#">Best Sellers</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-md-2 ft-col">
@@ -1510,50 +556,15 @@
         };
         const ALL = [...PRODS.solid, ...PRODS.stripe, ...PRODS.check, ...PRODS.printed];
 
-        function formatName(name) {
-            return name.replace(/([A-Z]{2,3}\d{6})/g, '<span style="color:#0066cc; font-weight: 500;">$1</span>');
-        }
-
-        function mkCard(p, i) {
-            const badge = p.nb ? '<span class="prod-badge">New</span>' : '<span class="prod-badge s">Sale</span>';
-            const imgHtml = p.img ? `<img src="${p.img}" alt="${p.n}">` : `<i class="fa-solid fa-shirt ti" style="color:${p.c};"></i>`;
-            return `<div class="col-6 col-md-4" style="flex:0 0 auto;" data-aos="fade-up" data-aos-delay="${i * 55}">
-        <div class="prod-card">
-          ${badge}
-          <div class="prod-thumb">
-            ${imgHtml}
-          </div>
-          <div class="prod-body">
-            <div class="prod-name">${formatName(p.n)}</div>
-            <div class="prod-price">${p.p.toLocaleString()}.00<span style="font-size:.7em; margin-left:2px;">&#2547;</span></div>
-            <button class="btn-sel">+ Select Options</button>
-          </div>
-        </div>
-      </div>`;
-        }
-
-        function fillGrid(gridId, cat) {
-            const $g = $('#' + gridId); $g.empty();
-            const isLg = window.innerWidth >= 992;
-            PRODS[cat].forEach((p, i) => {
-                const el = $(mkCard(p, i));
-                if (isLg) el.css({ 'flex': '0 0 20%', 'max-width': '20%' });
-                $g.append(el);
-            });
-        }
-        fillGrid('solidG', 'solid');
-        fillGrid('stripeG', 'stripe');
-        fillGrid('checkG', 'check');
-        fillGrid('printG', 'printed');
-        window.addEventListener('resize', () => {
-            fillGrid('solidG', 'solid'); fillGrid('stripeG', 'stripe');
-            fillGrid('checkG', 'check'); fillGrid('printG', 'printed');
-        });
-
-        // Offcanvas
+        // Offcanvas Category Panel
         function openCat() { $('#catPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); }
         function closeCat() { $('#catPanel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
-        $('#openCat,#mobMenu,#mbCat,#dMenuBtn').on('click', openCat);
+
+        // Offcanvas Menu and category panel
+        function openCat() { $('#catMenuPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); }
+        function closeCat() { $('#catMenuPanel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
+
+        $('#openCat,#mbCat').on('click', openCat);
         $('#ocX').on('click', closeCat);
         $('.oc-item[data-go]').on('click', function () { const g = $(this).data('go'); closeCat(); setTimeout(() => smoothTo(g), 340); });
         $('#ocQ').on('input', function () { const q = this.value.toLowerCase(); $('.oc-item').each(function () { $(this).toggle(!q || $(this).text().toLowerCase().includes(q)); }); });
@@ -1561,7 +572,7 @@
         // Search
         function openSearch() { $('#sPanel').addClass('open'); $('#ocBd').addClass('show'); $('body').css('overflow', 'hidden'); setTimeout(() => $('#sInp').focus(), 260); }
         function closeSearch() { $('#sPanel').removeClass('open'); $('#ocBd').removeClass('show'); $('body').css('overflow', ''); }
-        $('#dSrch,#dSrchBtn,#mobSBtn').on('click', openSearch);
+        $('#mobSBtn').on('click', openSearch);
         $('#sPanelX').on('click', closeSearch);
         $('#ocBd').on('click', function () { closeCat(); closeSearch(); });
         let dbt;
@@ -1579,15 +590,69 @@
         $('#sInp').on('input', function () { doSearch(this.value); });
         $('.stag').on('click', function () { const q = $(this).data('q'); $('#sInp').val(q); doSearch(q); });
 
-        // Sticky shadow
-        window.addEventListener('scroll', () => $('#sHdr').toggleClass('scrolled', window.scrollY > 10));
+        // Desktop floating menu control
+        function isDesktop() {
+            return window.matchMedia('(min-width: 768px)').matches;
+        }
+
+        let compactModeActive = false;
+
+        function setDesktopMenuState() {
+            if (!isDesktop()) {
+                document.body.classList.remove('nav-compact', 'nav-expanded');
+                $('#dMenuBtn').removeClass('active is-open');
+                compactModeActive = false;
+                return;
+            }
+
+            const y = window.scrollY;
+            if (!compactModeActive && y > 120) compactModeActive = true;
+            if (compactModeActive && y < 70) compactModeActive = false;
+
+            document.body.classList.toggle('nav-compact', compactModeActive);
+            $('#dMenuBtn').toggleClass('active', compactModeActive);
+
+            if (!compactModeActive) {
+                document.body.classList.remove('nav-expanded');
+                $('#dMenuBtn').removeClass('is-open');
+            }
+        }
+
+        $('#dMenuBtn').on('click', function () {
+            if (!isDesktop()) return;
+            const canToggle = document.body.classList.contains('nav-compact');
+            if (!canToggle) return;
+
+            document.body.classList.toggle('nav-expanded');
+            $(this).toggleClass('is-open', document.body.classList.contains('nav-expanded'));
+        });
+
+        $('.main-nav .nav-links a[href^="#"]').on('click', function (e) {
+            const targetId = this.getAttribute('href').slice(1);
+            if (!targetId) return;
+
+            e.preventDefault();
+            smoothTo(targetId);
+
+            $('.main-nav .nav-links a').removeClass('active');
+            $(this).addClass('active');
+
+            if (document.body.classList.contains('nav-compact')) {
+                document.body.classList.remove('nav-expanded');
+                $('#dMenuBtn').removeClass('is-open');
+            }
+        });
+
+        // Sticky shadow + desktop menu state on scroll
+        window.addEventListener('scroll', () => {
+            $('#sHdr').toggleClass('scrolled', window.scrollY > 10);
+            setDesktopMenuState();
+        });
+        window.addEventListener('resize', setDesktopMenuState);
+        setDesktopMenuState();
 
         // Smooth scroll helper
         function smoothTo(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-
-        // ESC
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeCat(); closeSearch(); } });
     </script>
 </body>
-
 </html>
